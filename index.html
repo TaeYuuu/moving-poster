@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kingsman</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	 <link rel="stylesheet" type="text/css" href="open.css">
+	<link rel="stylesheet" type="text/css" href="reset.css">
+</head>
+<body>
+	 <div class="wrap">	 	 
+		 <div class="head">
+		 	<div class="titleBox"><span>THE &nbsp; &nbsp; &nbsp; SECRET &nbsp; &nbsp; &nbsp; SERVICE &emsp; &emsp; &emsp; WE &nbsp; &nbsp; &nbsp; ARE &nbsp; &nbsp; &nbsp; KINGSMAN </span></div> 	
+		 </div>
+
+		 <div class="mid">	
+		 	
+		 	<div class="mid2-1">
+		 		<p class="p" data-split="Kings &nbsp;man">Kings &nbsp;man</p>	
+		 		<div class="effect-1"><img src="2.png" class="s1">
+		 		</div>	     	
+			   
+		 	</div>
+
+		 	<div class="mid2-2">
+		 		<h2 id="quote">During a mission in the Middle East in 1997, probationary secret agent Lee Unwin sacrifices himself to protect his superior, Harry Hart. Hart, blaming himself, returns to London to give Lee's widow, Michelle, and her young son Gary "Eggsy" a medal engraved with an emergency assistance number.</h2>
+		 	</div>
+		 	
+		 		
+		 </div> 	 			 	
+
+	</div>
+	
+	
+
+	<script>
+		var tl = gsap.timeline(), 
+
+		split = new SplitText("#quote", {type:"words,chars"}), 
+
+		words = split.words; //an array of all the divs that wrap each character
+
+		gsap.set("#quote", {perspective: 400});
+
+		tl.to(words, {
+		  duration: 1.5,
+		  "--weight": "700",
+		  ease: "none",
+		  color: "hsl(+=0, +=70%, +=20%)",
+		  stagger: {
+		    each: 0.4,
+		  }
+		})
+	</script>
+
+</body>
+</html>

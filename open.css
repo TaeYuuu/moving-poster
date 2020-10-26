@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+			
+
+			body{font-family: 'Merriweather', serif; }
+			body:after {
+		    content: '';
+		    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/texture.svg);
+		    position: fixed;
+		    width: 100%;
+		    height: 100%;		   
+		    opacity: 0.2;
+		    filter: invert(1);
+		    background-size: cover;
+		}
+
+			
+			.wrap{position: absolute; top: 0px; left: 0px; width: 100%; height: 100vh; overflow: hidden; background: linear-gradient(90deg, #000000 53%, #ffffff 47%);} 
+			.head{position: relative; top: 0px; left: 0px; width: 100%; height: 10vh; border-bottom: 0px solid white;}
+			.mid{position: relative; top: 0px; left: 0px; width: 100%; height: 100vh;}
+
+			.titleBox{width:100%; height:100%; font-weight: 400; font-size: 45px; letter-spacing: 1px;  float:left; padding-top: 3%; box-sizing:border-box; text-align: center;}
+			.titleBox span{color: #4c4c4c;}
+
+			.mid2-1{width: 100%; height: 100%; position: relative; float: center; overflow: visible; box-sizing: border-box; padding:1%; color: white; font-weight: 900;}
+			.s{position: absolute;				  				  
+				  width: 100%;}	
+
+			.s1{position: absolute;
+				top: -4%;				
+				left: 42%;
+				width: 23%; z-index: 999;}
+
+			@media(max-width:1680px){
+				.s1{top:-2%;
+					left: 41%;
+					width: 25%; z-index: 999;
+				}
+			}	
+
+			.mid2-2{ position: absolute; top:400px; left: 1150px; width:600px; height: 600px;overflow: visible; }
+
+
+			.effect-1 .s1 {
+				  transform: scale(1);
+				  transition: .4s;
+				}
+
+			.effect-1:hover .s1 {
+				  transform: scale(1.1);
+				}
+
+
+			.s2{position: absolute;
+				top: 36%;
+				left: 60%;					  
+				width: 29%;
+				filter: drop-shadow(7px 7px 8px #bfbfbf)}		
+
+			.p {position: absolute;
+				  top: 22%;
+				  left: 48%; 
+				  transform: translate(-50%, -50%);
+				  margin: 0;
+				  color: #000000; 
+				  font-size: 13.5vw;
+				  text-transform: uppercase;
+				  white-space: nowrap;				  
+				}
+
+			.p::before {
+				  position: absolute;
+				  top: 0;
+				  left: 0;
+				  content: attr(data-split);
+				  width: 55%;
+				  color: #ffff;
+				  overflow: hidden;
+				  text-shadow: 3px 4px 17px rgba(223,148,0, 0.8);
+				}
+			
+
+
+			.rot {width: 46%; position: absolute; top: 33.3%; left: -12.5%; float: center;  border: 3px solid #ffc502; box-sizing: border-box; padding:1%; border-radius:50%; color: white;
+				 -webkit-animation: rotation 25s infinite linear;
+				
+					}
+
+			 @media(max-width:1680px){			 	
+				.rot {width: 47%; top: 35.3%; left: -12%;
+					
+				}
+			}	
+
+			#quote {font-family: 'Merriweather', serif;
+				  --weight: 300;				
+				  font-size: 30px;
+				  font-weight: 300;
+				 
+				  line-height: 1.6;
+				  margin: 0;
+				  text-align: left;
+				}
+
+				#quote > * {
+				  color: hsl(347, 7%, 29%);
+				  font-variation-settings: 'wght' var(--weight);
+				}
+				.grid {
+				  grid-template-columns: repeat(3, 1fr);
+				}
